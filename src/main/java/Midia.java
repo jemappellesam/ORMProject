@@ -47,6 +47,20 @@ public class Midia {
         Diretor = diretor;
     }
 
+    @Override
+    public String toString() {
+        return "Midia{" +
+                "Nome='" + Nome + '\'' +
+                ", Genero=" + Genero.toString() +
+                ", AnoLancamento=" + AnoLancamento +
+                ", Diretor=" + Diretor.toString() +
+                '}';
+    }
 
-
+    public int getIDGenero() {
+        return Genero.getID();
+    }
+    public int getIDDiretor(){
+        return Diretor.getID();
+    }
 }

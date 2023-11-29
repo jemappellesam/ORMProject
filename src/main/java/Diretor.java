@@ -1,4 +1,5 @@
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,6 +15,7 @@ public class Diretor {
     List<Midia> Midias;
 
     public void addMidia(Midia midia){
+        Midias = new ArrayList<>();
         Midias.add(midia);
     }
 
@@ -27,5 +29,23 @@ public class Diretor {
 
     public void setNome(String nome) {
         Nome = nome;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    @Override
+    public String toString() {
+        return Nome;
+
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public List<Midia> getMidias() {
+        return Midias;
     }
 }
